@@ -11,6 +11,7 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  font-weight: bold;
 }
 
 main {
@@ -148,12 +149,16 @@ main {
   background-color: gray;
   border: 1px solid white;
   border-radius: 10px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: all 0.15s;
 }
 .keyboard-buttons-part > div:nth-child(1) div:hover {
   background-color: rgb(106, 106, 106);
   cursor: pointer;
+}
+.keyboard-buttons-part > div:nth-child(1) div:active {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
 }
 .keyboard-buttons-part > div:nth-child(2) {
   display: grid;
@@ -172,12 +177,16 @@ main {
   background-color: gray;
   border: 1px solid white;
   border-radius: 10px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: all 0.15s;
 }
 .keyboard-buttons-part > div:nth-child(2) div:hover {
   background-color: rgb(106, 106, 106);
   cursor: pointer;
+}
+.keyboard-buttons-part > div:nth-child(2) div:active {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
 }
 .keyboard-buttons-part > div:nth-child(3) {
   display: grid;
@@ -195,12 +204,16 @@ main {
   background-color: gray;
   border: 1px solid white;
   border-radius: 10px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: all 0.15s;
 }
 .keyboard-buttons-part > div:nth-child(3) div:hover {
   background-color: rgb(106, 106, 106);
   cursor: pointer;
+}
+.keyboard-buttons-part > div:nth-child(3) div:active {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
 }
 .keyboard-buttons-part > div:nth-child(4) {
   display: grid;
@@ -218,12 +231,16 @@ main {
   background-color: gray;
   border: 1px solid white;
   border-radius: 10px;
-  opacity: 0.3;
+  opacity: 0.5;
   transition: all 0.15s;
 }
 .keyboard-buttons-part > div:nth-child(4) > div:hover {
   background-color: rgb(106, 106, 106);
   cursor: pointer;
+}
+.keyboard-buttons-part > div:nth-child(4) > div:active {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
 }
 
 .setting-svg, .language-svg {
@@ -241,9 +258,7 @@ main {
   background-color: black;
   border-radius: 10px;
   place-self: end;
-  opacity: 0;
-  transform: translateX(100%);
-  animation: animationMore 0.3s linear 0s 1 alternate both;
+  color: white;
 }
 .more-settings > div {
   display: flex;
@@ -258,20 +273,51 @@ main {
   background-color: gray;
   border: 1px solid white;
   border-radius: 10px;
-  opacity: 0.3;
+  opacity: 0.5;
   font-size: large;
   text-align: center;
   padding: 20px 10px;
   transition: all 0.15s;
+  cursor: pointer;
+}
+.more-settings > div div:hover {
+  background-color: rgb(106, 106, 106);
+}
+.more-settings > div div:active {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
 }
 
-@keyframes animationMore {
-  100% {
-    transform: translateX(0);
-    display: inline-block;
-    opacity: 1;
-  }
-}
 .more-settings > div:nth-child(2) > div:nth-child(2), .more-settings > div:nth-child(2) > div:nth-child(3), .more-settings > div:nth-child(2) > div:nth-child(4) {
   padding: 20px;
+}
+
+.color {
+  color: blue;
+  background-image: linear-gradient(0deg, white, lightgray);
+}
+
+.animateShow {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: animationShow 0.3s linear 0s 1 alternate both;
+}
+
+@keyframes animationShow {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animateHide {
+  opacity: 1;
+  transform: translateX(0);
+  animation: animationHide 0.3s linear 0s 1 alternate both;
+}
+
+@keyframes animationHide {
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 }/*# sourceMappingURL=style.css.map */

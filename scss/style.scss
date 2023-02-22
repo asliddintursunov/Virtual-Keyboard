@@ -9,6 +9,7 @@ body{
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
+    font-weight: bold;
 }
 main{
     display: flex;
@@ -147,11 +148,16 @@ main{
             background-color: gray;
             border: 1px solid white;
             border-radius: 10px;
-            opacity: 0.3;
+            opacity: 0.5;
             transition: all 0.15s;
             &:hover{
                 background-color: rgb(106, 106, 106);
                 cursor: pointer;
+            }
+
+            &:active{
+        color: blue;
+        background-image: linear-gradient(0deg, white, lightgray);
             }
         }
     }
@@ -171,11 +177,16 @@ main{
             background-color: gray;
             border: 1px solid white;
             border-radius: 10px;
-            opacity: 0.3;
+            opacity: 0.5;
             transition: all 0.15s;
             &:hover{
                 background-color: rgb(106, 106, 106);
                 cursor: pointer;
+            }
+
+            &:active{
+        color: blue;
+        background-image: linear-gradient(0deg, white, lightgray);
             }
         }
     }
@@ -194,11 +205,16 @@ main{
             background-color: gray;
             border: 1px solid white;
             border-radius: 10px;
-            opacity: 0.3;
+            opacity: 0.5;
             transition: all 0.15s;
             &:hover{
                 background-color: rgb(106, 106, 106);
                 cursor: pointer;
+            }
+
+            &:active{
+        color: blue;
+        background-image: linear-gradient(0deg, white, lightgray);
             }
         }
     }
@@ -217,11 +233,16 @@ main{
             background-color: gray;
             border: 1px solid white;
             border-radius: 10px;
-            opacity: 0.3;
+            opacity: 0.5;
             transition: all 0.15s;
             &:hover{
                 background-color: rgb(106, 106, 106);
                 cursor: pointer;
+            }
+
+            &:active{
+        color: blue;
+        background-image: linear-gradient(0deg, white, lightgray);
             }
         }
     }
@@ -233,16 +254,13 @@ main{
 
 /* ====== More Buttons ====== */
 .more-settings{
-    // display: none; // ! ======== DISPLAY NONE HERE
     width: fit-content;
     height: fit-content;
     padding: 5px;
     background-color: black;
     border-radius: 10px;
     place-self: end;
-    opacity: 0;
-    transform: translateX(100%);
-    animation: animationMore 0.3s linear 0s 1 alternate both;
+    color: white;
     &>div{
         display: flex;
         flex-direction: row;
@@ -256,18 +274,20 @@ main{
         background-color: gray;
         border: 1px solid white;
         border-radius: 10px;
-        opacity: 0.3;
+        opacity: 0.5;
         font-size: large;
         text-align: center;
         padding: 20px 10px;
         transition: all 0.15s;
-    }
-}
-@keyframes animationMore {
-    100%{
-        transform: translateX(0);
-        display: inline-block;
-        opacity: 1;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(106, 106, 106);
+        }
+
+        &:active{
+        color: blue;
+        background-image: linear-gradient(0deg, white, lightgray);
+        }
     }
 }
 .more-settings > div{
@@ -276,4 +296,34 @@ main{
             padding: 20px;
         }
     } 
+}
+.color{
+    color: blue;
+    background-image: linear-gradient(0deg, white, lightgray);
+}
+
+.animateShow{
+    opacity: 0;
+    transform: translateX(100%);
+    animation: animationShow 0.3s linear 0s 1 alternate both;
+}
+@keyframes animationShow {
+    100%{
+        // display: inline-block;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animateHide{
+    opacity: 1;
+    transform: translateX(0);
+    animation: animationHide 0.3s linear 0s 1 alternate both;
+}
+@keyframes animationHide {
+    100%{
+        // display: inline-block;
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }
