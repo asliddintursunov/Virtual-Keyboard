@@ -16,12 +16,16 @@
     <!-- ======= Main Part ======= -->
     <main>
         <!-- ======= Press to start part ======= -->
-        <div class="start-part">
-            <h1>Press any button to start</h1>
+        <div class="start-part start-hide" id="start-part">
+            <h1>Click me to start writing</h1>
         </div>
-
+        <!-- ====== Rule for more keyboards ====== -->
+        <h3 class="hide" id="rule">Click Setting (left-bottom) for more keyboards❗
+            <br> 
+            Check the box where you want to write❗
+        </h3>
             <!-- ======= Input Part ======= -->
-        <div class="input-part-container" id="input">
+        <div class="input-part-container hide" id="input">
             <div class="top-side"> <!-- Top side -->
                 <div class="svg-container">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -29,8 +33,14 @@
                     </svg>
                 </div>
                 <div class="input-container">
-                    <input type="email" placeholder="email">
-                    <input type="password" placeholder="password">
+                    <div>
+                        <input type="checkbox" id="email-checkbox" class="email-checkbox">
+                        <input type="email" placeholder="email" id="email">
+                    </div>
+                    <div>
+                        <input type="checkbox" id="password-checkbox" class="password-checkbox">
+                        <input type="password" placeholder="password" id="password">
+                    </div>
                 </div>
             </div>
             <div class="bottom-side"> <!-- Bottom side -->
@@ -40,7 +50,7 @@
 
         <div style="display: flex; flex-direction: row; width: 80%; align-items: center; justify-content: center; margin-left: -290px;">
             <!-- ====== Additional buttons ====== -->
-            <div class="more-settings animateHide" id="more-settings">
+            <div class="more-settings animateHide hide" id="more-settings">
                 <div>
                     <div id="NumpadAdd" value="+">+</div>
                     <div id="NumpadSubtract" value="-">—</div>
@@ -57,7 +67,7 @@
                 </div>
             </div>
             <!-- ======= Keyboard Part ======= -->
-            <div class="keyboard-container" id="keyboard">
+            <div class="keyboard-container hide" id="keyboard">
                 <!-- Keyboard top part -->
                 <div class="keyboard-top-part">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -111,7 +121,7 @@
                         <div id="KeyM" value="m">m</div>
                         <div id="Colon" value=",">,</div>
                         <div id="Period" value=".">.</div>
-                        <div id="ShiftRight" value="ShiftRight">←</div>
+                        <div id="Backspace" value="Backspace">←</div>
                     </div>
                     <div>
                         <div>

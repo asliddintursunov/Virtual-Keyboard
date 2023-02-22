@@ -16,16 +16,21 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
 .start-part{
+    position: absolute;
+    top: 40%;
+    left: 37%;
     background-color: gray;
+    color: blue;
     opacity: 0.9;
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 15px;
     transition: all 0.2s;
     cursor: pointer;
-
     &:hover{
         background-color: rgb(87, 87, 87);
     }
@@ -40,6 +45,7 @@ main{
     align-items: center;
     justify-content: center;
     width: fit-content;
+    margin-bottom: 30px;
     .top-side{
         display: flex;
         flex-direction: row;
@@ -322,8 +328,41 @@ main{
 }
 @keyframes animationHide {
     100%{
-        // display: inline-block;
         opacity: 0;
         transform: translateX(100%);
     }
+}
+.input-container > div{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Start Button */
+.start-part{
+    animation: startButtonAnimation 1s linear 0s infinite alternate both;
+}
+@keyframes startButtonAnimation {
+    100%{
+        box-shadow: 0px 0px 45px lightblue;
+        opacity: 0.8;
+        color: lightblue;
+    }
+}
+
+/* Hide Keywords */
+.hide{
+    display: none;
+}
+
+.start-hide{
+    display: block;
+}
+
+#rule{
+    color: wheat;
+    font-family: cursive;
+    background-color: gray;
+    padding: 5px 12px;
+    border-radius: 5px;
+    border: 3px solid darkgray;
 }
